@@ -47,8 +47,8 @@ public class TransitionZoom: NSObject, UIViewControllerTransitioningDelegate, UI
             }
         }
         else {
-            container.addSubview(toView)
-            container.addSubview(fromView)
+            container!.addSubview(toView)
+            container!.addSubview(fromView)
             
             SpringAnimation.springEaseInOut(duration) {
                 fromView.transform = CGAffineTransformMakeScale(2, 2)
